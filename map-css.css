@@ -1,0 +1,86 @@
+.stiemap-posts {
+  position: relative;
+  display: block;
+  margin: 16px 0 24px;
+}
+
+.stiemap-posts h4 {
+  background: rgba(206, 204, 204, 0.35);
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 16px;
+  border-bottom: 2px solid #b5b5b5;
+  margin: 0 0 6px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+}
+
+.stiemap-posts h4:before {
+  content: "\f142";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 14px;
+  margin-right: 8px;
+  color: #000;
+}
+
+.stiemap-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(246, 252, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 6px;
+  padding: 8px 12px;
+  box-shadow: 2px 4px 10px rgba(167, 225, 255, 0.28);
+}
+
+.stiemap-wrap p {
+  width: calc(50% - 6px);
+  margin: 4px 0;
+}
+
+.stiemap-wrap p a {
+  position: relative;
+  font-size: 15px;
+  line-height: 26px;
+  display: block;
+  margin: 8px 0;
+  font-weight: 500;
+  color: #000;
+  border-bottom: 1px solid #d4ebf9;
+  transition: color 0.3s ease;
+}
+
+.stiemap-wrap p a:hover {
+  color: #1616fb;
+}
+
+.stiemap-wrap p a:before {
+  content: "\f192";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 26px;
+  margin-right: 6px;
+  color: #000;
+}
+
+.stiemap-wrap p strong span {
+  color: #e00303;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* استجابة الشاشات الصغيرة */
+@media screen and (max-width: 640px) {
+  .stiemap-wrap {
+    display: block;
+  }
+  .stiemap-wrap p {
+    width: 100%;
+  }
+}
