@@ -1,0 +1,173 @@
+.stiemap-posts {
+  position: relative;
+  display: block;
+  margin: 14px 0 20px;
+}/* --- جميع شريط العناوين داخل Sitemap --- */
+.stiemap-posts h4 {
+  display: flex;             /* لتجنب مشاكل float للأيقونة */
+  align-items: center;       /* محاذاة الأيقونة والنص عموديًا */
+  min-height: 35px;          /* يضمن ارتفاع ثابت لجميع الشريط */
+  padding: 10px 14px;        /* مسافة داخلية متساوية */
+  line-height: 26px;         /* يوازن النص والأيقونة */
+  background: linear-gradient(135deg, #4facfe, #00f2fe); /* تدرج جميل */
+  color: #fff;               /* لون النص أبيض */
+  border-radius: 6px;
+  margin: 6px 0;             /* مسافة خارجية متساوية */
+  box-shadow: 0 2px 6px rgba(0,0,0,.1); /* ظل ناعم */
+  font-size: 16px;
+}
+
+/* أيقونة قبل العنوان */
+.stiemap-posts h4:before {
+  content: "\f02d";          /* أيقونة كتاب من Font Awesome 6 */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 14px;
+  color: #fff;
+  margin-right: 8px;
+  float: none;               /* إزالة float بعد استخدام flex */
+}
+
+/* --- صندوق روابط المقالات --- */
+.stiemap-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fbfd;
+  border: 1px solid #e2ecf5;
+  border-radius: 6px;
+  padding: 6px 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.05);
+}
+
+.stiemap-wrap p {
+  width: calc((100% - 10px) / 2);
+  margin: 4px 0;
+}
+
+.stiemap-wrap p a {
+  position: relative;
+  font-size: 15px;
+  line-height: 26px;
+  display: block;
+  margin: 6px 0;
+  font-weight: 500;
+  color: #333;
+  padding-left: 22px; /* مساحة للأيقونة */
+  transition: all 0.3s ease;
+}
+
+.stiemap-wrap p a:before {
+  content: "\f0da"; /* سهم Font Awesome */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 13px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #00bcd4;
+}
+
+.stiemap-wrap p a:hover {
+  color: #0077ff;
+}
+
+.stiemap-wrap p strong span {
+  color: #e91e63;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* --- تجاوب مع الأجهزة الصغيرة --- */
+@media screen and (max-width: 640px) {
+  .stiemap-wrap {
+    display: block;
+  }
+  .stiemap-wrap p {
+    width: 100%;
+  }
+}
+
+
+.stiemap-posts h4 {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 16px;
+  margin: 0 0 6px;
+  line-height: 22px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.1);
+}
+
+.stiemap-posts h4:before {
+  content: "\f02d"; /* أيقونة كتاب */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  float: left;
+  margin: 0 8px 0 0;
+  font-size: 14px;
+  color: #fff;
+}
+
+.stiemap-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fbfd;
+  border: 1px solid #e2ecf5;
+  border-radius: 6px;
+  padding: 6px 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.05);
+}
+
+.stiemap-wrap p {
+  width: calc((100% - 10px) / 2);
+  margin: 4px 0;
+}
+
+.stiemap-wrap p a {
+  position: relative;
+  font-size: 15px;
+  line-height: 26px;
+  display: block;
+  margin: 6px 0;
+  font-weight: 500;
+  color: #333;
+  padding-left: 22px;
+  transition: all 0.3s ease;
+}
+
+.stiemap-wrap p a:before {
+  content: "\f0da"; /* سهم أنيق */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 13px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #00bcd4;
+}
+
+.stiemap-wrap p a:hover {
+  color: #0077ff;
+}
+
+.stiemap-wrap p strong span {
+  color: #e91e63;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 640px) {
+  .stiemap-wrap {
+    display: block;
+  }
+  .stiemap-wrap p {
+    width: 100%;
+  }
+}
