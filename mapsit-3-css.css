@@ -1,0 +1,134 @@
+/* --- شريط العناوين داخل Sitemap --- */
+.stiemap-posts h4 {
+  display: flex;             
+  align-items: center;       
+  min-height: 35px;          
+  padding: 10px 14px;        
+  line-height: 26px;         
+  background: linear-gradient(to left, #8e0e00#c6c6c6, #ff9201, #c6c6c6); /* التدرج الجديد */
+  color: #fff;               
+  border-radius: 6px;
+  margin: 6px 0;             
+  box-shadow: 0 2px 6px rgba(0,0,0,.1); 
+  font-size: 16px;
+}
+
+/* أيقونة قبل العنوان */
+.stiemap-posts h4:before {
+  content: "\f02d";          /* أيقونة كتاب من Font Awesome 6 */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 14px;
+  color: #fff;
+margin: 0px 6px 0px 6px;
+}
+
+/* --- صندوق روابط المقالات --- */
+.stiemap-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fbfd;
+  border: 1px solid #e2ecf5;
+  border-radius: 6px;
+  padding: 6px 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.05);
+}
+
+.stiemap-wrap p {
+  display: flex;
+  justify-content: space-between; /* النص على اليسار والسهم على اليمين */
+  align-items: center;
+  margin: 4px 0;
+}
+
+.stiemap-wrap p a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* السهم على اليمين */
+.stiemap-wrap p a:after {
+  content: "\f061"; /* أيقونة سهم Font Awesome 6 */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 13px;
+  color: #00bcd4;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.stiemap-wrap p a:hover {
+  color: #0077ff;
+}
+
+.stiemap-wrap p strong span {
+  color: #e91e63;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* --- Media Queries لتصميم متجاوب --- */
+
+/* الهواتف الصغيرة جدًا */
+@media screen and (max-width: 480px) {
+  .stiemap-wrap {
+    display: block;
+  }
+  .stiemap-wrap p {
+    width: 100%;
+    flex-direction: row;
+  }
+}
+
+/* الهواتف المتوسطة */
+@media screen and (min-width: 481px) and (max-width: 640px) {
+  .stiemap-wrap {
+    display: block;
+  }
+  .stiemap-wrap p {
+    width: 100%;
+    flex-direction: row;
+  }
+}
+
+/* الأجهزة اللوحية الصغيرة */
+@media screen and (min-width: 641px) and (max-width: 768px) {
+  .stiemap-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .stiemap-wrap p {
+    width: 48%;
+  }
+}
+
+/* الأجهزة اللوحية الكبيرة / شاشات صغيرة للابتوب */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .stiemap-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .stiemap-wrap p {
+    width: 48%;
+  }
+}
+
+/* شاشات الديسكتوب الكبيرة */
+@media screen and (min-width: 1025px) {
+  .stiemap-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .stiemap-wrap p {
+    width: calc((100% - 10px)/2);
+  }
+}
